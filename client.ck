@@ -57,7 +57,7 @@ fun void readInFile(SndBuf buf, string fileName) {
     (me.dir() + fileName => buf.read);
 };
 
-fun bufPlayLoop(SndBuf buf, Envelope env) {
+fun void bufPlayLoop(SndBuf buf, Envelope env) {
     // play sound file in a loop (this does NOT turn on envelope)
     // make sure buf loops and starts at the beginning of file
     0 => buf.pos;
