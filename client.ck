@@ -55,7 +55,7 @@ fun void setTempo(int newTempo) {
 fun void readInFile(SndBuf buf, string fileName) {
     // read in sound file from current directory and assign to buffer
     (me.dir() + fileName => buf.read);
-}
+};
 
 fun bufPlayLoop(SndBuf buf, Envelope env) {
     // play sound file in a loop (this does NOT turn on envelope)
@@ -81,7 +81,7 @@ fun bufPlayLoop(SndBuf buf, Envelope env) {
     }
     // turn off when loop killed
     env.keyOff();
-}
+};
 
 fun void playNote(Envelope e) {
     // play a single note (noteLength + gapTime = beatTime)
@@ -95,7 +95,7 @@ fun void playNote(Envelope e) {
     //<<< "OFF" >>>;
     // wait gapTime seconds
     gapTime::second => now;
-}
+};
 
 fun void playSequence(int seq[], Envelope e1, Envelope e2) {
     // iterate through sequence and look for 1s or 0s
@@ -118,7 +118,7 @@ fun void playSequence(int seq[], Envelope e1, Envelope e2) {
             
         }
     }
-}
+};
 
 int test;
 
@@ -175,7 +175,7 @@ fun void oscListener() {
             //1::second => now;
         }
     }
-}
+};
 
 // initialize tempo
 setTempo(120);
