@@ -3,7 +3,6 @@
 SndBuf buf1 => Envelope bufEnv1 => Gain sGain1 => dac.chan(0);
 SndBuf buf2 => Envelope bufEnv2 => Gain sGain2 => dac.chan(1);
 
-
 0.0 => sGain1.gain;
 0.09 => sGain2.gain;
 
@@ -27,18 +26,12 @@ float audioLevel;
 
 
 // need to sort this out...
-16 => sequenceLength; // needs to match size of sequence in python
+14 => sequenceLength; // needs to match size of sequence in python
 int sequence[sequenceLength]; // sequence of 1s and 0s
 0 => int offset;
 (sequenceLength * beatTime) => sequenceTime;
 
-
-
-
-
-
-
-
+// ---------------------------------------
 
 
 // OSC
