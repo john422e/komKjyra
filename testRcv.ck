@@ -1,7 +1,7 @@
 OscIn oin;
 OscMsg msg;
 
-10000 => oin.port;
+10010 => oin.port;
 oin.listenAll();
 
 <<< "Listening on port 10000..." >>>;
